@@ -1,11 +1,13 @@
+$(document).ready(function() {
+
 // Adding current date to the jumbotron.
 let currentDate = $("#currentDay").text(moment().format("MMMM Do YYYY"));
 
 
 let description = $(".description");
 let saveButton = $(".saveBtn");
-let hour = $(".hour");
 let currentHour = moment().hour();
+
 console.log(currentHour);
 console.log(typeof currentHour);
 
@@ -13,7 +15,6 @@ console.log(typeof currentHour);
 // Color coding the time blocks using each and comparing the moment current time (currentHour) to the id attribute assigned to the textarea.
 description.each(function () {
     let timeBlock = parseInt($(this).attr("id"));
-    console.log(typeof description);
 
     if (timeBlock === currentHour) {
         $(this).addClass("present");
@@ -32,47 +33,45 @@ description.each(function () {
     }
 });
 
+description.each(function() {
 
-let userTasks = JSON.parse(localStorage.getItem("userTasks")) || {};
-
-// for (let [key, value] of Object.defineProperties(userTasks)){
-//     $(`#${key}`).val(value);
-// }
-
-// console.log(`${key}: ${value}`);
-
-// function saveTasks () {
-//     let currentTime = $(this).data("hour");
-//     let rowHour = $(this).siblings(".hour").text();
-//     let task = $(this).siblings(".time-block").val();
-
-//     console.log(currentTime);
-//     console.log(rowHour);
-//     console.log(task);
-
-//     if (task === "") {
-//         return false;
-//     }
-//     else {
-//         userTasks.push()
-//         localStorage.setItem("userData", JSON.stringify(userTasks));
-   
-//     }
-// }
-
-
-// function reset() {
-
-//     for (let i = 0; i < userTasks.length; i++) {
+    for (let i = 0; i < localStorage.length; i++) {
+        let objectKey = localStorage.key(i);
+        let taskValue = localStorage.getItem(objectKey);
+        let rowHour = $(this).siblings(".hour").text();
         
-//         if (userTasks[i].hour === hour.text()) {
-//             console.log(hour.index());
-//             timeBlock.val(userTasks[i].task);
-//         }
-//     }
-// }
+        console.log(rowHour);
+        console.log(typeof rowHour);
+        console.log(objectKey);
+        console.log(typeof objectKey);
+        console.log(taskValue);
+        console.log(typeof taskValue);
+       
+        if (objectKey === rowHour) {
+            $(this).val(taskValue);
+        }
+       
+    }
+});
 
+// Function to save task input once the save button is clicked. 
+function saveTasks () {
+    let currentTime = $(this).data("hour");
+    let rowHour = $(this).siblings(".hour").text();
+    let task = $(this).siblings(".description").val();
 
-// $(window).on("load", reset());
-// saveButton.on("click", saveTasks);
+    console.log(currentTime);
+    console.log(rowHour);
+    console.log(task);
 
+    if (task === "") {
+        localStorage.setItem(rowHour, "");
+    }
+    else {
+        localStorage.setItem(rowHour, task);
+    }
+}
+
+saveButton.on("click", saveTasks);
+
+});
