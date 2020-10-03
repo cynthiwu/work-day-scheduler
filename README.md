@@ -1,22 +1,32 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Workday Scheduler
 
-## Your Task
+Explore the [project page](https://github.com/cynthiwu/work-day-scheduler)
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+View it live on [github-pages](https://cynthiwu.github.io/work-day-scheduler/)
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
-
-
-## User Story
-
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+## Table of Contents
+- [About The Project](#about-the-project)
+  - [Acceptance Criteria](#acceptance-criteria)
+- [Usage](#usage)
+  - [Demo](#demo)
+- [Built With](#built-with)
+- [Contributing](#contributing)
+- [Contact](#contact)
 
 
-## Acceptance Criteria
+## About The Project
+
+The goal of this project was to create a simple workday scheduler. The scheduler has a row to represent each hour of the typical workday (i.e., 9AM to 5PM) where the user can enter and save tasks for that given hour. Each hour is color-coded based on whether it has passed, is current, or is in the future. 
+
+<hr>
+
+![Project Snapshot](./Assets/preview.png)
+
+<hr>
+
+### Acceptance Criteria
+
+The below were the acceptance criteria for this project:
 
 ```
 GIVEN I am using a daily planner to create a schedule
@@ -35,61 +45,24 @@ THEN the saved events persist
 ```
 
 
-## Mock-Up
+## Usage
 
-The following animation demonstrates the application functionality:
+This project can be used by anyone who wishes to visually keep track of their work tasks over the day. The data will persist over a browser refresh for later use. 
 
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
+### Demo
 
+Watch the gif below to see how the quiz works. 
 
-## Grading Requirements
-
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * Uses the Moment.js library to work with date and time
-
-### Deployment: 32%
-
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the homework instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
+![Workday Scheduler Demo](./Assets/scheduler.gif)
 
 
-## Review
+## Built With
 
-You are required to submit BOTH of the following for review:
+* This project was built using [Bootstrap](https://getbootstrap.com/).
 
-* The URL of the functional, deployed application.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+## Contact
 
-- - -
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+Cynthia Wu - [@cynthia21wu](https://twitter.com/cynthia21wu) - cynthia21wu@gmail.com
+
+Project Link: [https://github.com/cynthiwu/work-day-scheduler](https://github.com/cynthiwu/work-day-scheduler)
