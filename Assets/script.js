@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 // Adding current date to the jumbotron.
-let currentDate = $("#currentDay").text(moment().format("MMMM Do YYYY"));
+$("#currentDay").text(moment().format("MMMM Do YYYY"));
 
 
 let description = $(".description");
@@ -32,6 +32,8 @@ description.each(function () {
         $(this).removeClass("present");
     }
 });
+
+// Using .each function in order to populate tasks that have been saved in local storage to the appropriate row upon loading the browser. 
 
 description.each(function() {
 
